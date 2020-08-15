@@ -1,0 +1,7 @@
+-
+  name: ExecScript
+  hosts: Localhost
+  tasks:
+    -
+        name: Execute Script
+        script: E:/Ansible/test.sh

@@ -1,0 +1,12 @@
+-
+  name: 'Test Conditional'
+  hosts: localhost
+  vars:
+    num: 5
+  tasks:
+    -
+        command: echo "Less than 5"
+        when: num<5
+    -
+        command: echo "More than 5"
+        when: num>5
