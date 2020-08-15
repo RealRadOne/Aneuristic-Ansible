@@ -1,0 +1,16 @@
+-
+  name: Test Dictionary
+  hosts: localhost
+  tasks:
+    -
+        name: Check
+        command: echo '{{item.a}}' '{{item.b}}'
+        loop:
+            - a: Sakshi
+              b: 100
+            - a: Shrishti
+              b: 90
+            - a: Ayushi
+              b: 100
+            - a: Pruthvi
+              b: 100
