@@ -1,0 +1,14 @@
+-
+  name: "Server1 Demo"
+  hosts: localhost
+  tasks:
+    -
+      name: "Check one"
+      command: date
+-
+  name: "Server2 Demo"
+  hosts: localhost
+  tasks:
+    -
+      name: "Check two"
+      command: date

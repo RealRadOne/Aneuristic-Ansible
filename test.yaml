@@ -1,6 +1,4 @@
--
-  name: Test connection
-  hosts: all
+---
+- hosts: localhost
   tasks:
-         -name: Ping test
-          ping:
+    - debug: msg="Ansible is working!"

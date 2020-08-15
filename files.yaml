@@ -1,0 +1,7 @@
+-
+  name: "TestFileExec"
+  hosts: localhost
+  tasks:
+    -
+     name: "TestFileExec"
+     command: cat /E:/ss_files
