@@ -1,0 +1,9 @@
+-
+  name: Check mail
+  hosts: localhost
+  tasks:
+    - mail:
+          to: shrishtisakshi311@gmail.com
+          subject: Test Ansible mail
+          body: Henlo! This is automated mail
+      ignore_errors: yes

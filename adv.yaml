@@ -1,0 +1,36 @@
+-
+  name: 'Test Advance'
+  hosts: localhost
+  tasks:
+    -
+      name: Install dependencies
+      apt: name={{item}} state=latest
+      with_items:
+        - python
+        - python-setuptools
+        - python-dev
+        - build-essential
+        - python-pip
+    -
+      name: Install dependencies
+      apt: name={{item}} state=installed
+      with_items:
+        - mysql-server
+        - mysql-client
+    -
+      name: Start MYSql Service
+      service:
+        name: mysql
+        state: started
+        enabled: yes
+    -
+      name: Create Database
+      mysql_db: name=employee_db state=present
+    -
+      name: Create user
+      mysql_user: 
+        name: user
+        password: 12345
+        priv: '*.*:ALL'
+        state: present
+

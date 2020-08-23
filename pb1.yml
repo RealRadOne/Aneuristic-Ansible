@@ -1,0 +1,22 @@
+-
+  hosts: cdhservers
+  tasks:
+    - 
+        name: DISKSPACE
+        shell: df -h
+        register: out1
+    - 
+        debug: var=out1.stdout_lines
+    - 
+        name: CPU/RAM
+        shell: vmstat -w 3 3
+        register: out2
+    - 
+        debug: var=out2.stdout_lines
+
+    - 
+        name: FREEMEM
+        shell: free -h
+        register: out3
+    - 
+        debug: var=out3.stdout_lines

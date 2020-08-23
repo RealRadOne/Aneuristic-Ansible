@@ -1,0 +1,2 @@
+[cdhservers]
+localhost
